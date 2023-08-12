@@ -1,0 +1,44 @@
+basePath: /
+info:
+  contact: {}
+  description: This is a sample API for demonstration purposes.
+  title: My API
+  version: "1.0"
+paths:
+  /products:
+    get:
+      description: Get all products
+      produces:
+      - application/json
+      responses: {}
+      summary: Get a list of products
+      tags:
+      - Products
+  /products/:id:
+    delete:
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      summary: Delete product by ID
+      tags:
+      - Products
+    get:
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      summary: Get a product detail
+      tags:
+      - Products
+swagger: "2.0"
